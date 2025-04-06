@@ -1,3 +1,4 @@
 #!/bin/bash
-source "$(dirname "$(readlink -f "$0")")/.venv/bin/activate"
-python -m otp_manager.cli "$@"
+OTP_PATH="$(dirname "$(readlink -f "$0")")"
+source "$OTP_PATH/.venv/bin/activate"
+PYTHONPATH=$OTP_PATH python -m otp_manager.cli "$@"
