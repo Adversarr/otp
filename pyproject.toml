@@ -1,0 +1,19 @@
+[project]
+name = "otp_manager"
+version = "0.1.0"
+description = "CLI tool for managing OTP secrets"
+authors = [{name = "Zherui Yang", email = "zherui_yang@mail.ustc.edu.cn"}]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "click>=8.1.8",
+    "cryptography>=44.0.2",
+    "pyotp>=2.9.0",
+    "pyperclip>=1.9.0",
+    "rich>=14.0.0",
+    "tomli-w>=1.0.0",
+]
+
+[project.scripts]
+otp = "otp_manager.cli:main"
